@@ -1,0 +1,12 @@
+[
+    {
+        "image": "redis",
+        "ipaddress": "10.0.0.1",
+        "name": "big_stallman"
+    },
+    {
+        "image": "nginx",
+        "ipaddress": "10.0.0.2",
+        "name": "cranky_euclid"
+    }
+]

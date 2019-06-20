@@ -1,0 +1,52 @@
+[
+    {
+        "region": "east",
+        "name": "prod",
+        "servers": [
+            {
+                "name": "web-0",
+                "hostname": "hydrogen"
+            },
+            {
+                "name": "web-1",
+                "hostname": "helium"
+            },
+            {
+                "name": "db-0",
+                "hostname": "lithium"
+            }
+        ]
+    },
+    {
+        "region": "west",
+        "name": "smoke",
+        "servers": [
+            {
+                "name": "web-1000",
+                "hostname": "beryllium"
+            },
+            {
+                "name": "web-1001",
+                "hostname": "boron"
+            },
+            {
+                "name": "db-1000",
+                "hostname": "carbon"
+            }
+        ]
+    },
+    {
+        "region": "west",
+        "name": "dev",
+        "servers": [
+            {
+                "name": "web-dev",
+                "hostname": "nitrogen"
+            },
+            {
+                "name": "db-dev",
+                "hostname": "oxygen"
+            }
+        ]
+    }
+]
