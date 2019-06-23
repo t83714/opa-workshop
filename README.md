@@ -99,3 +99,7 @@ You should see:
 ```json
 {"result":"Hello World"}
 ```
+
+## List of Tutorials
+- [Self Guide Tutorial One - Rego Basics](./tutorial1.md)
+
