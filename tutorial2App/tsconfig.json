@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": ["es2015", "es2017", "dom"],
+    "declaration": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "target": "ES2015",
+    "module": "commonjs",
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src"]
+}

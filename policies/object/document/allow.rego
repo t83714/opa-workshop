@@ -9,10 +9,10 @@ allow {
 allow {
     input.user.roles[_].name = "document readers"
     input.document.ownerName = input.user.name
-    input.document.classificationLevels <= 1
+    input.document.classificationLevel <= 3
 }
 
 allow {
     input.user.roles[_].name = "document power readers"
-    input.document.classificationLevels <= 9
+    input.document.classificationLevel <= 9
 }

@@ -1,0 +1,39 @@
+{
+  "name": "tutorial2app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-db": "cd pg && docker-compose up -d",
+    "stop-db": "cd pg && docker-compose down -v",
+    "start-opa": "opa run ../policies -s",
+    "test": "mocha -r ts-node/register -r tsconfig-paths/register \"test/**/*.spec.ts\""
+  },
+  "author": "Jacky Jiang",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^8.0.1",
+    "lodash": "^4.17.11",
+    "pg": "^7.11.0",
+    "recursive-readdir": "^2.2.2",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/fs-extra": "^7.0.0",
+    "@types/lodash": "^4.14.134",
+    "@types/mocha": "^5.2.7",
+    "@types/pg": "^7.4.14",
+    "@types/recursive-readdir": "^2.2.0",
+    "@types/request": "^2.48.1",
+    "@types/request-promise-native": "^1.0.16",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.1.4",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "typescript": "^3.5.2"
+  }
+}

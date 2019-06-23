@@ -83,6 +83,7 @@
 ### Task 4
 
 - Create a policy (named `task4`) that return a list of apps that are usually deployed together.
+    - Hint: Self Join
 - Access this policy in REPL and verify your result
 - Access this policy via HTTP API and verify your result
 

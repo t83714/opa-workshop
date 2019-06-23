@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "name": "Mocha Debug Current File",
+      "program": "${workspaceRoot}/tutorial2App/node_modules/mocha/bin/_mocha",
+      "cwd": "${workspaceRoot}",
+      "args": [
+        "-r", 
+        "ts-node/register",
+        "-r",
+        "tsconfig-paths/register",
+        "${file}"
+      ],
+      "env": {
+          "TS_NODE_PROJECT": "${workspaceRoot}/tutorial2App/tsconfig.json"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "name": "Debug Current Node Script",
+      "program": "${file}",
+      "cwd": "${workspaceRoot}",
+      "args": []
+    }
+  ]
+}

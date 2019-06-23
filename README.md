@@ -106,4 +106,5 @@ You should see:
 
 ## List of Tutorials
 - [Self Guide Tutorial One - Rego Basics](./tutorial1.md)
+- [Self Guide Tutorial Two - Partial Eval](./tutorial2.md)
 
