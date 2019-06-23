@@ -1,5 +1,9 @@
 # opa-workshop
 
+Workshop slides: 
+
+https://drive.google.com/file/d/1xNNvnniHgKUpBKj9GMUnTHk0RwRbrSHR
+
 ## 1. Installation Open Policy Agent
 
 ### MacOS
