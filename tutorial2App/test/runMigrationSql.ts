@@ -43,10 +43,7 @@ export default async function runMigrationSql(
     pool: pg.Pool,
     deleteAllTable: boolean = false
 ) {
-    const migrationSqlDir = path.resolve(
-        __dirname,
-        "../sql"
-    );
+    const migrationSqlDir = path.resolve(__dirname, "../sql");
     const files = await recursive(migrationSqlDir, ["*,sql"]);
     const fileObjects = files
         .map(f => ({

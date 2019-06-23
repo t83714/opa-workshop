@@ -6,12 +6,15 @@
   "scripts": {
     "start-db": "cd pg && docker-compose up -d",
     "stop-db": "cd pg && docker-compose down -v",
+    "start-es": "cd es && docker-compose up -d",
+    "stop-es": "cd es && docker-compose down -v",
     "start-opa": "opa run ../policies -s",
     "test": "mocha -r ts-node/register -r tsconfig-paths/register \"test/**/*.spec.ts\""
   },
   "author": "Jacky Jiang",
   "license": "MIT",
   "dependencies": {
+    "@elastic/elasticsearch": "6",
     "fs-extra": "^8.0.1",
     "lodash": "^4.17.11",
     "pg": "^7.11.0",

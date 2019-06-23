@@ -1,8 +1,9 @@
 import * as pg from "pg";
+import * as es from "@elastic/elasticsearch";
 import * as _ from "lodash";
 import * as request from "request-promise-native";
 import OpaCompileResponseParser from "./OpaCompileResponseParser";
-import SimpleOpaSQLTranslator from "./SimpleOpaSQLTranslator";
+import SimpleOpaESTranslator from "./SimpleOpaESTranslator";
 import createUserSessionData from "./createUserSessionData";
 
 interface Document {
@@ -13,6 +14,8 @@ interface Document {
 
 export default async function getUserDocuments(
     pool: pg.Pool,
+    client: es.Client,
+    idxName: string,
     userName: string
 ): Promise<Document[]> {
     const userData = await createUserSessionData(pool, userName);
@@ -30,21 +33,24 @@ export default async function getUserDocuments(
     const parser = new OpaCompileResponseParser();
     parser.parse(res);
 
-    const sqlValues: any[] = [];
-    const translator = new SimpleOpaSQLTranslator(["input.document"]);
-    const sqlClause = translator.parse(
-        parser.evaluateRule("data.partial.object.document.allow"),
-        sqlValues
+    const ruleResult = parser.evaluateRule(
+        "data.partial.object.document.allow"
     );
 
-    const result = await pool.query(
-        `SELECT * FROM documents ${sqlClause ? `WHERE ${sqlClause}` : ""}`,
-        sqlValues
-    );
+    const translator = new SimpleOpaESTranslator(["input.document"]);
+    const query = translator.parse(ruleResult);
 
-    if (!result || !_.isArray(result.rows) || !result.rows.length) {
-        return [];
+    const esResult = await client.search({
+        index: idxName,
+        body: { query }
+    });
+    if (
+        esResult.body &&
+        esResult.body.hits &&
+        _.isArray(esResult.body.hits.hits) &&
+        esResult.body.hits.hits.length
+    ) {
+        return esResult.body.hits.hits.map((item: any) => item._source);
     }
-
-    return result.rows;
+    return [];
 }
