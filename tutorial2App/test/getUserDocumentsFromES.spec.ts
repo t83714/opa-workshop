@@ -43,6 +43,11 @@ const testDocuments = [
         ownerName: "user4",
         classificationLevel: 5
     },
+    {
+        name: "doc51",
+        ownerName: "none",
+        classificationLevel: 10
+    }
 ];
 
 describe("Test getUserDocumentsFromES", function(this: Mocha.ISuiteCallbackContext) {
@@ -132,7 +137,7 @@ describe("Test getUserDocumentsFromES", function(this: Mocha.ISuiteCallbackConte
             "user1"
         );
     
-        expect(documents.length).to.equal(6);
+        expect(documents.length).to.equal(7);
         const documentNames = documents.map(doc => doc.name);
         expect(documentNames).to.have.members([
             "doc11",
@@ -140,7 +145,8 @@ describe("Test getUserDocumentsFromES", function(this: Mocha.ISuiteCallbackConte
             "doc31",
             "doc32",
             "doc41",
-            "doc42"
+            "doc42",
+            "doc51"
         ]);
     });
 
@@ -151,7 +157,7 @@ describe("Test getUserDocumentsFromES", function(this: Mocha.ISuiteCallbackConte
             idxName,
             "user2"
         );
-        expect(documents.length).to.equal(6);
+        expect(documents.length).to.equal(7);
         const documentNames = documents.map(doc => doc.name);
         expect(documentNames).to.have.members([
             "doc11",
@@ -159,7 +165,8 @@ describe("Test getUserDocumentsFromES", function(this: Mocha.ISuiteCallbackConte
             "doc31",
             "doc32",
             "doc41",
-            "doc42"
+            "doc42",
+            "doc51"
         ]);
     });
 
@@ -193,5 +200,43 @@ describe("Test getUserDocumentsFromES", function(this: Mocha.ISuiteCallbackConte
             "user5"
         );
         expect(documents.length).to.equal(0);
+    });
+
+    it("Should not allow user6 to any documents except doc51", async () => {
+        const documents = await getUserDocumentsFromES(
+            pool,
+            esClient,
+            idxName,
+            "user6"
+        );
+        expect(documents.length).to.equal(6);
+        const documentNames = documents.map(doc => doc.name);
+        expect(documentNames).to.have.members([
+            "doc11",
+            "doc21",
+            "doc31",
+            "doc32",
+            "doc41",
+            "doc42"
+        ]);
+    });
+
+    it("Should not allow user7 to any documents except doc51", async () => {
+        const documents = await getUserDocumentsFromES(
+            pool,
+            esClient,
+            idxName,
+            "user7"
+        );
+        expect(documents.length).to.equal(6);
+        const documentNames = documents.map(doc => doc.name);
+        expect(documentNames).to.have.members([
+            "doc11",
+            "doc21",
+            "doc31",
+            "doc32",
+            "doc41",
+            "doc42"
+        ]);
     });
 });

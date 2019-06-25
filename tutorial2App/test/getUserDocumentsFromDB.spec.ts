@@ -48,7 +48,7 @@ describe("Test getUserDocumentsFromDB", function(this: Mocha.ISuiteCallbackConte
 
     it("Should allow user1 to access all documents", async () => {
         const documents = await getUserDocumentsFromDB(pool, "user1");
-        expect(documents.length).to.equal(6);
+        expect(documents.length).to.equal(7);
         const documentNames = documents.map(doc => doc.name);
         expect(documentNames).to.have.members([
             "doc11",
@@ -56,13 +56,14 @@ describe("Test getUserDocumentsFromDB", function(this: Mocha.ISuiteCallbackConte
             "doc31",
             "doc32",
             "doc41",
-            "doc42"
+            "doc42",
+            "doc51"
         ]);
     });
 
     it("Should allow user2 to access all documents", async () => {
         const documents = await getUserDocumentsFromDB(pool, "user2");
-        expect(documents.length).to.equal(6);
+        expect(documents.length).to.equal(7);
         const documentNames = documents.map(doc => doc.name);
         expect(documentNames).to.have.members([
             "doc11",
@@ -70,7 +71,8 @@ describe("Test getUserDocumentsFromDB", function(this: Mocha.ISuiteCallbackConte
             "doc31",
             "doc32",
             "doc41",
-            "doc42"
+            "doc42",
+            "doc51"
         ]);
     });
 
@@ -89,5 +91,39 @@ describe("Test getUserDocumentsFromDB", function(this: Mocha.ISuiteCallbackConte
     it("Should not allow user5 to any documents", async () => {
         const documents = await getUserDocumentsFromDB(pool, "user5");
         expect(documents.length).to.equal(0);
+    });
+
+    it("Should not allow user6 to any documents except doc51", async () => {
+        const documents = await getUserDocumentsFromDB(
+            pool,
+            "user6"
+        );
+        expect(documents.length).to.equal(6);
+        const documentNames = documents.map(doc => doc.name);
+        expect(documentNames).to.have.members([
+            "doc11",
+            "doc21",
+            "doc31",
+            "doc32",
+            "doc41",
+            "doc42"
+        ]);
+    });
+
+    it("Should not allow user7 to any documents except doc51", async () => {
+        const documents = await getUserDocumentsFromDB(
+            pool,
+            "user7"
+        );
+        expect(documents.length).to.equal(6);
+        const documentNames = documents.map(doc => doc.name);
+        expect(documentNames).to.have.members([
+            "doc11",
+            "doc21",
+            "doc31",
+            "doc32",
+            "doc41",
+            "doc42"
+        ]);
     });
 });

@@ -20,12 +20,15 @@ INSERT INTO "public"."documents" ("name", "ownerName", "classificationLevel") VA
 ('doc31', 'user3', '3'),
 ('doc32', 'user3', '4'),
 ('doc41', 'user4', '4'),
-('doc42', 'user4', '5');
+('doc42', 'user4', '5'),
+('doc51', 'none', '10');
 
 INSERT INTO "public"."users" ("name", "role", "accessLevel") VALUES 
 ('user1', 'admin', '-1'),
 ('user2', 'admin', '5'),
 ('user3', 'document readers', '-1'),
 ('user4', 'document readers', '4'),
-('user5', 'anonymous users', '-1');
+('user5', 'anonymous users', '-1'),
+('user6', 'document power readers', '-1'),
+('user7', 'document power readers', '4');
 

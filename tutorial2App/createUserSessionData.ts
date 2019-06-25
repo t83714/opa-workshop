@@ -1,6 +1,11 @@
 import * as pg from "pg";
 import * as _ from "lodash";
 
+/**
+ * Create session data for specified user
+ * @param pool database Pool
+ * @param userName 
+ */
 export default async function createUserSessionData(
     pool: pg.Pool,
     userName: string
