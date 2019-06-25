@@ -98,7 +98,7 @@ Press Ctrl + C
 
 You can use the preset vscode launch configuration `Mocha Debug Current File` to debug the current opened test case source code file and set break points.
 
-![vscode](https://raw.githubusercontent.com/t83714/master/vscode.png)
+![vscode](https://raw.githubusercontent.com/t83714/opa-workshop/master/vscode.png)
 
 ### Tutorial Task 1
 
