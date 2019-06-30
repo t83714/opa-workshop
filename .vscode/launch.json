@@ -25,7 +25,7 @@
       "protocol": "inspector",
       "name": "Debug Current Node Script",
       "program": "${file}",
-      "cwd": "${workspaceRoot}",
+      "cwd": "${fileDirname}",
       "args": []
     }
   ]

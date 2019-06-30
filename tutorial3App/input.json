@@ -1,0 +1,14 @@
+{
+    "user": {
+        "name": "Joe Blogger",
+        "roles": [
+            {
+                "name": "document readers"
+            }
+        ]
+    },
+    "document": {
+        "classificationLevel": 1,
+        "ownerName": "Joe Blogger"
+    }
+}

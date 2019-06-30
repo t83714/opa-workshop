@@ -1,0 +1,28 @@
+{
+  "name": "tutorial3app",
+  "version": "1.0.0",
+  "description": "tutorial3app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build-wasm": "opa build \"data.object.document.allow == true\" -d \"../policies/object/document/allow.rego\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t83714/opa-workshop.git"
+  },
+  "keywords": [
+    "opa-workshop"
+  ],
+  "author": "Jacky Jiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/t83714/opa-workshop/issues"
+  },
+  "homepage": "https://github.com/t83714/opa-workshop#readme",
+  "dependencies": {
+    "@open-policy-agent/opa-wasm": "^1.0.2",
+    "chalk": "^2.4.2"
+  }
+}

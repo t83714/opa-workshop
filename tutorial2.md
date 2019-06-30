@@ -1,6 +1,6 @@
 ## Tutorial Two - Partial Eval
 
-You are provided [sample code](./tutorial2App) for data filter in both PostgreSQL Database & Elasticsearch.
+You are provided [sample code](./tutorial2App) for data filter with both PostgreSQL Database & Elasticsearch.
 
 You can run the provided test cases to obverse the sample code behaviour and set breakpoints to intercept the communications between OPA and different services to understand more how partial eval works.
 
@@ -114,6 +114,8 @@ Understand [getUserDocumentsFromDB.ts](./tutorial2App/getUserDocumentsFromDB.ts)
     - The demo db will be auto re-created before first test case run
   - Observe how SQL statement is generated from partial eval AST (Abstract Syntax Tree)
 
+Please note: You can find the database initialisation script from [here](./tutorial2App/sql).
+
 ### Tutorial Task 2
 
 Read the opa policy [policies/object/document/allow.rego](./policies/object/document/allow.rego) and understand the policy logic.
@@ -130,6 +132,8 @@ Understand [getUserDocumentsFromES.ts](./tutorial2App/getUserDocumentsFromES.ts)
   - Check the demo data in elasticsearch
     - The demo data will be auto re-created before first test case run
   - Observe how Elasticsearch DSL query is generated from partial eval AST (Abstract Syntax Tree)
+
+Please note: You can find the database initialisation script from [here](./tutorial2App/sql).
 
 ### Tutorial Task 3
 
