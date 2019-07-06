@@ -13,6 +13,12 @@ You are required to write a command line program that:
 
 As WebAssembly is a portable binary code format, you should be able to complete the program in most common languages you choose (e.g. C/C++, C#/.Net, Java/Scala, Python, Javascript, Rust, Go etc.) via [WebAssembly Runtimes](https://github.com/appcypher/awesome-wasm-runtimes) available for your language.
 
+#### Sample Code
+
+If you can't work it out, you can choose to have a try with the sample code provided in this repo:
+- [NodeJs Sample Code](./tutorial3App)
+- [Sample Code in Scala](./tutorial3-scala)
+
 
 #### To Compile Policy to WASM Binary
 
@@ -45,6 +51,14 @@ There is also a NodeJs package [@open-policy-agent/opa-wasm](https://www.npmjs.c
 
 #### If you choose to complete the task using other languages
 
+You may use [wasmer](https://github.com/wasmerio/wasmer) as WebAssembly runtime to run your policy and it comes with the following language support:
+* [**Rust**](https://github.com/wasmerio/wasmer-rust-example)
+* [**C/C++**](https://github.com/wasmerio/wasmer-c-api)
+* [**PHP**](https://github.com/wasmerio/php-ext-wasm)
+* [**Python**](https://github.com/wasmerio/python-ext-wasm)
+* [**Ruby**](https://github.com/wasmerio/ruby-ext-wasm)
+* [**Go**](https://github.com/wasmerio/go-ext-wasm)
+
 You will need to talk to the policy WASM binary directly. Here is the info of the common APIs comes with policy WASM binary.
 
 ##### Imports
@@ -74,8 +88,3 @@ A WASM module can declare a sequence of imports which are provided, at instantia
   - Return value: Boolean; Whether or not the policy is met based on input context data.
 
 
-### Sample Code
-
-If you can't work it out, you can choose to have a try with the sample code in this repo:
-- [NodeJs Sample Code](./tutorial3App)
-- [Sample Code in Scala](./tutorial3-scala)
