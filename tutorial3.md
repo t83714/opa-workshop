@@ -77,5 +77,5 @@ A WASM module can declare a sequence of imports which are provided, at instantia
 ### Sample Code
 
 If you can't work it out, you can choose to have a try with the sample code in this repo:
-- [NodeJs Sample Code](./tutorial3App/README.md)
-- [Sample Code in Scala](./tutorial3-scala/README.md)
+- [NodeJs Sample Code](./tutorial3App)
+- [Sample Code in Scala](./tutorial3-scala)
