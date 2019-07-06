@@ -1,20 +1,17 @@
 ### How to run
 
-#### Install Dependencies
+#### Prerequisites
 
-```bash
-yarn install
-```
+You need to the followings to run the scala program:
+
+-   [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - To run the JVM components, and to build the small amount of Java code.
+-   [sbt](http://www.scala-sbt.org/) - To build the Scala components.
+
 
 #### Compile Policy to WebAssembly binary
 
 ```bash
 opa build "data.object.document.allow == true" -d "../policies/object/document/allow.rego"
-```
-
-OR 
-```bash
-yarn build-wasm
 ```
 
 More usage info:
@@ -25,7 +22,7 @@ opa build --help
 #### Run
 
 ```bash
-yarn start
+sbt run
 ```
 
 You're expected to see the following output from console:
