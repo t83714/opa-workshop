@@ -1,4 +1,4 @@
-package tutorials.t4.orgChart
+package tutorials.t4
 import data.tutorials.t4.orgData
 
 getAllSubordinates[subordinate] {
