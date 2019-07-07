@@ -1,0 +1,47 @@
+[
+    {
+      "name": "Albert",
+      "left": 1,
+      "right": 18
+    },
+    {
+      "name": "Bert",
+      "left": 2,
+      "right": 9
+    },
+    {
+      "name": "Chuck",
+      "left": 10,
+      "right": 17
+    },
+    {
+      "name": "Jane",
+      "left": 3,
+      "right": 4
+    },
+    {
+      "name": "Joe",
+      "left": 5,
+      "right": 8
+    },
+    {
+      "name": "Max",
+      "left": 6,
+      "right": 7
+    },
+    {
+      "name": "Donna",
+      "left": 11,
+      "right": 12
+    },
+    {
+      "name": "Eddie",
+      "left": 13,
+      "right": 14
+    },
+    {
+      "name": "Fred",
+      "left": 15,
+      "right": 16
+    }
+]

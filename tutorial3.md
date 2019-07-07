@@ -1,4 +1,4 @@
-## Tutorial Three - Compile Wasm Policy
+## Tutorial Three - WebAssembly Policy
 
 Open policy agent allows you to compile your policies into a [WebAssembly binaries](https://en.wikipedia.org/wiki/WebAssembly). The WebAssembly binaries can be run locally via [WebAssembly Runtimes](https://github.com/appcypher/awesome-wasm-runtimes) available for various languages and embeded into your project.
 

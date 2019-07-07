@@ -107,5 +107,6 @@ You should see:
 ## List of Tutorials
 - [Self Guide Tutorial One - Rego Basics](./tutorial1.md)
 - [Self Guide Tutorial Two - Partial Eval](./tutorial2.md)
-- [Self Guide Tutorial Three - Compile Wasm Policy](./tutorial3.md)
+- [Self Guide Tutorial Three - WebAssembly Policy](./tutorial3.md)
+- [Self Guide Tutorial Four - Rego Code Challenge](./tutorial4.md)
 
