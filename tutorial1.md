@@ -71,7 +71,7 @@
 
 - Create a policy (named `allowExternalAccess`) that:
   - Given input of a hostname
-  - the policy return `true` when the hostname is part of production deployment
+  - the policy return `true` when the hostname is part of production deployment (i.e. site name is "prod")
   - otherwise return `false`
   - e.g. the policy should 
     - return `true` for hostname `hydrogen`

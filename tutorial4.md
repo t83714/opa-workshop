@@ -109,5 +109,6 @@ should return response:
 
 #### Sample Solution
 
-Sample Solution and more info can found from [here](./t4.md)
+- A Simple Sample Solution one can found from [here](./policies/tutorials/t4alt)
+- A Better Solution and more info can found from [here](./t4.md)
 

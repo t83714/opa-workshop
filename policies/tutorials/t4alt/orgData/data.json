@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Albert",
+    "children": [2, 3]
+  },
+  {
+    "id": 2,
+    "name": "Bert",
+    "children": [4, 5]
+  },
+  {
+    "id": 3,
+    "name": "Chuck",
+    "children": [6, 7, 8]
+  },
+  {
+    "id": 4,
+    "name": "Jane",
+    "children": []
+  },
+  {
+    "id": 5,
+    "name": "Joe",
+    "children": [9]
+  },
+  {
+    "id": 6,
+    "name": "Donna",
+    "children": []
+  },
+  {
+    "id": 7,
+    "name": "Eddie",
+    "children": []
+  },
+  {
+    "id": 8,
+    "name": "Fred",
+    "children": []
+  },
+  {
+    "id": 9,
+    "name": "Max",
+    "children": []
+  }
+]
