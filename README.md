@@ -10,7 +10,7 @@ https://drive.google.com/file/d/1xNNvnniHgKUpBKj9GMUnTHk0RwRbrSHR
 
 ```bash
 cd /usr/local/bin
-curl -L -o opa https://github.com/open-policy-agent/opa/releases/download/v0.12.0/opa_darwin_amd64
+curl -L -o opa https://github.com/open-policy-agent/opa/releases/download/v0.10.7/opa_darwin_amd64
 chmod 755 ./opa
 ```
 OPA is also available on Homebrew but no up to date version.
@@ -19,13 +19,13 @@ OPA is also available on Homebrew but no up to date version.
 
 Download from here:
 
-https://github.com/open-policy-agent/opa/releases/download/v0.12.0/opa_windows_amd64.exe
+https://github.com/open-policy-agent/opa/releases/download/v0.10.7/opa_windows_amd64.exe
 
 ### Linux
 
 Download from here:
 
-https://github.com/open-policy-agent/opa/releases/download/v0.12.0/opa_linux_amd64
+https://github.com/open-policy-agent/opa/releases/download/v0.10.7/opa_linux_amd64
 
 ## 2. Verify Your Installation
 
