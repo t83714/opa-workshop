@@ -32,10 +32,7 @@ export default async function getUserDocuments(
 
     const sqlValues: any[] = [];
     const translator = new SimpleOpaSQLTranslator(["input.document"]);
-    const sqlClause = translator.parse(
-        parser.evaluateRule("data.partial.object.document.allow"),
-        sqlValues
-    );
+    const sqlClause = translator.parse(parser.evaluateRule(), sqlValues);
 
     const result = await pool.query(
         `SELECT * FROM documents ${sqlClause ? `WHERE ${sqlClause}` : ""}`,

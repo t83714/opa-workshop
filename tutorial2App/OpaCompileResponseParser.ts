@@ -971,12 +971,59 @@ export default class OpaCompileResponseParser {
             // --- mean no rule matched
             return [];
         }
+
         this.data = this.data.result;
-        if (!_.isArray(this.data.support) || !this.data.support.length) {
+        const packages: any[] =
+            _.isArray(this.data.support) && this.data.support.length
+                ? this.data.support
+                : [];
+
+        if (_.isArray(this.data.queries) && this.data.queries.length) {
+            // --- create default query package for query body
+            const defaultQueryPackage = {
+                package: {
+                    path: [
+                        {
+                            type: "var",
+                            value: "query"
+                        }
+                    ]
+                },
+                rules: [] as any[]
+            };
+            this.data.queries.forEach((queryRuleBody: any) => {
+                if (!Array.isArray(queryRuleBody))
+                    throw new Error("Invalid response in `queries` section");
+                const defaultRule = {
+                    head: {
+                        name: "default",
+                        value: {
+                            type: "boolean",
+                            value: true
+                        }
+                    },
+                    body: queryRuleBody.length
+                        ? queryRuleBody
+                        : [
+                              {
+                                  index: 0,
+                                  terms: [
+                                      {
+                                          type: "boolean",
+                                          value: true
+                                      }
+                                  ]
+                              }
+                          ]
+                };
+                defaultQueryPackage.rules.push(defaultRule);
+            });
+            packages.push(defaultQueryPackage);
+        }
+        if (!packages.length) {
             // --- mean no rule matched
             return [];
         }
-        const packages: any[] = this.data.support;
         packages.forEach(p => {
             if (!_.isArray(p.rules) || !p.rules.length) return;
             const packageName =
@@ -1079,7 +1126,7 @@ export default class OpaCompileResponseParser {
      * @returns {CompleteRuleResult}
      * @memberof OpaCompileResponseParser
      */
-    evaluateRule(fullName: string): CompleteRuleResult {
+    evaluateRule(fullName: string = "query.default"): CompleteRuleResult {
         let rules = this.rules.filter(r => r.fullName === fullName);
         if (!rules.length) {
             // --- no any rule matched; often (depends on your policy) it means a overall non-matched (false)
@@ -1122,7 +1169,9 @@ export default class OpaCompileResponseParser {
      * @returns {string}
      * @memberof OpaCompileResponseParser
      */
-    evaluateRuleAsHumanReadableString(fullName: string): string {
+    evaluateRuleAsHumanReadableString(
+        fullName: string = "query.default"
+    ): string {
         const result = this.evaluateRule(fullName);
         if (result === null) return "null";
         if (result.isCompleteEvaluated) {

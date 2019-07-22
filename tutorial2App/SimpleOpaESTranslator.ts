@@ -41,7 +41,7 @@ class SimpleOpaESTranslator {
     }
 
     parse(result: CompleteRuleResult, sqlParametersArray: any[] = []) {
-        if (result === null) return "false"; // --- no matched rules
+        if (result === null) return { match_none: {} }; // --- no matched rules
         if (result.isCompleteEvaluated) {
             if (result.value === false) return { match_none: {} };
             else
