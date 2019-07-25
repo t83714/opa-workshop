@@ -787,6 +787,11 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
+lodash-es@^4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
+  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+
 lodash@^4.17.11:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
@@ -974,6 +979,13 @@ once@^1.3.0, once@^1.3.1, once@^1.4.0:
   integrity sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
   dependencies:
     wrappy "1"
+
+opa-compile-response-parser@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/opa-compile-response-parser/-/opa-compile-response-parser-1.0.3.tgz#8e4c441be3e8bc6317481a316c43d4f42b625d3c"
+  integrity sha512-wid77jng1BcoR2dkDFEhn3OLMnCn2sXmrzRTtd1nN3n/Ba98SlpD+UEHquYp1Q32keh2hb5ViRWcpqXBx9ilTw==
+  dependencies:
+    lodash-es "^4.17.15"
 
 os-locale@^3.0.0, os-locale@^3.1.0:
   version "3.1.0"

@@ -1,7 +1,7 @@
 import * as pg from "pg";
 import * as _ from "lodash";
 import * as request from "request-promise-native";
-import OpaCompileResponseParser from "./OpaCompileResponseParser";
+import OpaCompileResponseParser from "opa-compile-response-parser";
 import SimpleOpaSQLTranslator from "./SimpleOpaSQLTranslator";
 import createUserSessionData from "./createUserSessionData";
 
@@ -32,7 +32,7 @@ export default async function getUserDocuments(
 
     const sqlValues: any[] = [];
     const translator = new SimpleOpaSQLTranslator(["input.document"]);
-    const sqlClause = translator.parse(parser.evaluateRule(), sqlValues);
+    const sqlClause = translator.parse(parser.evaluate(), sqlValues);
 
     const result = await pool.query(
         `SELECT * FROM documents ${sqlClause ? `WHERE ${sqlClause}` : ""}`,

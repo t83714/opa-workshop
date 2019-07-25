@@ -1,6 +1,6 @@
 {
   "name": "tutorial2app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "@elastic/elasticsearch": "6",
     "fs-extra": "^8.0.1",
     "lodash": "^4.17.13",
+    "opa-compile-response-parser": "^1.0.3",
     "pg": "^7.11.0",
     "recursive-readdir": "^2.2.2",
     "request": "^2.88.0",
