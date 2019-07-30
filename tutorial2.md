@@ -6,6 +6,10 @@ You can run the provided test cases to obverse the sample code behaviour and set
 
 You are also provided a set of new requirements that require you to modify the current policy logic and observe how the existing data filtering code still works with new policy logic without adjustments.
 
+The sample code use [opa-compile-response-parser](https://github.com/t83714/opa-compile-response-parser) to parse the OPA compile response.
+
+You can find its API document [here](https://t83714.github.io/opa-compile-response-parser/).
+
 
 ### Prerequisite Installation
 
@@ -24,6 +28,7 @@ To run the demo program in this tutorial, you need to install the following:
 - VSCode:
   - https://code.visualstudio.com/download 
   - You will need vscode to debug provided test cases using [provided launch configurations](./.vscode/launch.json).
+  - For windows users, if you use WSL and had any issue with VS code debugging, you probably want to try the [Vscode insider version](https://code.visualstudio.com/insiders/)
 
 
 ### Install NPM package
