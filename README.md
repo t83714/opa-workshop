@@ -49,7 +49,7 @@ opa run ./policies
 You will see:
 
 ```
-OPA 0.10.7 (commit 0f39c27e, built at 2019-04-09T00:29:06Z)
+OPA 0.12.1 (commit 2799e148, built at 2019-07-06T15:26:21Z)
 
 Run 'help' to see a list of commands.
 
