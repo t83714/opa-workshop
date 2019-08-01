@@ -19,7 +19,7 @@ OPA is also available on Homebrew but no up to date version.
 
 Download from here:
 
-https://github.com/open-policy-agent/opa/releases/download/v0.12.1opa_windows_amd64.exe
+https://github.com/open-policy-agent/opa/releases/download/v0.12.1/opa_windows_amd64.exe
 
 ### Linux
 
